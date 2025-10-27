@@ -69,6 +69,10 @@
       height: 100%;
       box-sizing: border-box;
 
+      .reviewable-filters-actions {
+        margin-bottom: 2em;
+      }
+
       @include viewport.until(sm) {
         order: 1;
         margin: 0 0 1em 0;
