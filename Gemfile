@@ -167,6 +167,8 @@ group :development do
   gem "ruby-lsp-rails", require: false
 end
 
+gem "discourse_dev_assets"
+gem "faker"
 if ENV["ALLOW_DEV_POPULATE"] == "1"
   gem "discourse_dev_assets"
   gem "faker"
