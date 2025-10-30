@@ -183,7 +183,7 @@ class ProblemCheck
     next_run_at = perform_every&.from_now
 
     if problems.empty?
-      targets.call.each { |t| tracker(t).no_problem!(next_run_at:) }
+      each_target { |t| tracker(t).no_problem!(next_run_at:) }
     else
       problems
         .uniq(&:target)
@@ -196,6 +196,10 @@ class ProblemCheck
     end
 
     problems
+  end
+
+  def each_target(&)
+    targets.call.each(&)
   end
 
   private
